@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.utils;
 
+import com.example.demo.domain.Player;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 

@@ -1,21 +1,20 @@
 package com.example.demo;
 
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
+import com.example.demo.domain.Player;
+import com.example.demo.service.PlayerService;
+import com.example.demo.utils.CsvUtilFile;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CSVUtilTest {
+
+    @Autowired
+    PlayerService service;
 
     @Test
     void converterData(){
@@ -44,8 +43,11 @@ public class CSVUtilTest {
 
     @Test
     void reactive_filtrarJugadoresMayoresA35(){
-        List<Player> list = CsvUtilFile.getPlayers();
-        Flux<Player> listFlux = Flux.fromStream(list.parallelStream()).cache();
+        //List<Player> list = CsvUtilFile.getPlayers();
+        //Flux<Player> listFlux = Flux.fromStream(list.parallelStream()).cache();
+        Flux<Player> listFlux = service.findAll().
+                buffer(100).
+                flatMap(x -> Flux.fromStream(x.parallelStream()));
         Mono<Map<String, Collection<Player>>> listFilter = listFlux
                 .filter(player -> player.age >= 35)
                 .map(player -> {

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -6,20 +6,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "player")
 public class Player {
     @Id
-    public int id;
+    public Integer id;
     public String name;
-    public int age;
+    public Integer age;
     public String icon;
     public String national;
-    public int winners;
-    public int games;
+    public Integer winners;
+    public Integer games;
     public String club;
 
     public Player(){
 
     }
 
-    public Player(int id, String name, int age, String icon, String national, int winners, int games, String club) {
+    public Player(Integer id, String name, Integer age, String icon, String national, Integer winners, Integer games, String club) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -30,11 +30,11 @@ public class Player {
         this.club = club;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -46,11 +46,11 @@ public class Player {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -70,19 +70,19 @@ public class Player {
         this.national = national;
     }
 
-    public int getWinners() {
+    public Integer getWinners() {
         return winners;
     }
 
-    public void setWinners(int winners) {
+    public void setWinners(Integer winners) {
         this.winners = winners;
     }
 
-    public int getGames() {
+    public Integer getGames() {
         return games;
     }
 
-    public void setGames(int games) {
+    public void setGames(Integer games) {
         this.games = games;
     }
 
