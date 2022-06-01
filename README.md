@@ -1,3 +1,8 @@
+
+# Integrantes del grupo: Juan pablo davila, Juliana Camilo Mesa y Ana Milena Estrada.
+# Se realizo conexion con la base de datos Mongodb, se realizo la migracion de los datos y se permite la recuperacion de lops mismos desde la base de datos no desde el mismo archivo, se realizaron pruebas con postman para madificar la base de adtos y para buscar, se observo el rendimiento tanto con el test funcional como reactivo. Quedamos atententos---
+
+
 # Challenge reactor-core
 
 Dentro del código se encutra un ejemplo para aplicar reactividad con Spring Boot, se cuenta con una herramienta utilitaria para leer archivos CSV, lo que se buscar es aplicar los operadores reactivas para leer este archivo, y se reta para hacer este procedimiento en mongodb.
