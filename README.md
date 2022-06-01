@@ -1,6 +1,6 @@
 
-# Integrantes del grupo: Juan pablo davila, Juliana Camilo Mesa y Ana Milena Estrada.
-# Se realizo conexion con la base de datos Mongodb, se realizo la migracion de los datos y se permite la recuperacion de lops mismos desde la base de datos no desde el mismo archivo, se realizaron pruebas con postman para madificar la base de adtos y para buscar, se observo el rendimiento tanto con el test funcional como reactivo. Quedamos atententos---
+# Integrantes del grupo: Juan pablo Dávila, Juliana Camilo Mesa y Ana Milena Estrada.
+# Se realizo conexión con la base de datos Mongodb, se realizó la migración de los datos y se permite la recuperación de los mismos desde la base de datos no desde el mismo archivo, se realizaron pruebas con postman para modificar la base de datos y para buscar, se observó el rendimiento tanto con el test funcional como reactivo. Quedamos atententos---
 
 
 # Challenge reactor-core
